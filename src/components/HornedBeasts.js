@@ -10,7 +10,8 @@ class HornedBeast extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      favoriteBeast: 0
+      favoriteBeast: 0,
+      selectedBeast:'',
     };
   }
 
@@ -20,13 +21,31 @@ class HornedBeast extends React.Component {
     });
   }
 
+
+  selectBeast = (beast) => {
+    beast = this.props.title;
+    this.setState({selectedBeast: beast});
+    this.props.selectBeast(beast);
+    console.log('HBTrigger', this.state);
+  }
+
+  showModal = () => {
+    this.props.showModal();
+    console.log('HB');
+  }
+
+  pushKeys = () => {
+    this.selectBeast();
+    this.showModal();
+  }
+
   render() {
 
     return (
 
       <>
-        <Card style={{ width: '18rem', display: 'inline-block', marginLeft: '3%' }}>
-          <Card.Img variant="top" src={this.props.imageUrl} alt={this.props.imageAlt} title={this.props.imageTitle} />
+        <Card style={{ width: '18rem', display: 'inline-block', marginLeft: '3%', }}>
+          <Card.Img variant="top" src={this.props.imageUrl} alt={this.props.imageAlt} title={this.props.imageTitle} onClick={this.pushKeys}/>
           <Card.Body>
             <Card.Title><h2>{this.props.title}</h2></Card.Title>
             <Card.Text>
