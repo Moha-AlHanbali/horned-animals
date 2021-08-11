@@ -19,7 +19,7 @@ class App extends React.Component {
 
   selectBeast = (beast) => {
     this.setState({selectedBeast: beast});
-    console.log('App Trigger', beast);
+    console.log('App Trigger', this.state);
   }
 
   showModal = () => {
@@ -30,8 +30,6 @@ class App extends React.Component {
   hideModal = () => {
     this.setState ({showModal: false});
   }
-
-
 
   render() {
 
@@ -51,7 +49,6 @@ class App extends React.Component {
       <>
         <Header />
         <Main getBeasts= {beastsData} showModal={this.showModal} selectBeast={this.selectBeast}/>
-
         <SelectedBeast title={matchTitle} description={matchDescription} imgURL ={matchImg} showModal={this.showModal} hideModal={this.hideModal} modalState={this.state.showModal}/>
         <Footer />
       </>

@@ -152,5 +152,19 @@
       "description": "Harmful witch who has the ability to turn into, possess, or disguise themselves as an animal.",
       "keyword": "witch",
       "horns": 2
+    },
+    {
+      "image_url": "https://www.realmofhistory.com/wp-content/uploads/2017/10/10-bizarre-mythical-monsters_7.jpg?ezimgfmt=ng:webp/ngcb20",
+      "title": "Erymanthian Boar",
+      "description": "A mythical creature that took the form of a shaggy tameless boar.",
+      "keyword": "boar",
+      "horns": 100
+    },
+    {
+      "image_url": "https://i.pinimg.com/originals/a1/6b/a5/a16ba55a38c86709d245a27a2493ea11.png",
+      "title": "Capra Demon",
+      "description": "These demons are large humanoids with four red-glowing eyes and a horned skull for a head.",
+      "keyword": "demon",
+      "horns": 2
     }
   ]
